@@ -24,7 +24,7 @@ function ToDoItem({todo, index}) {
             <strong>{index + 1} </strong>
             { todo.title }
         </span>
-        <button>&times;</button>
+        <button className="removeBtn">&times;</button>
     </li>
     )  
 }

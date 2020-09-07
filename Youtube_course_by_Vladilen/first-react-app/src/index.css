@@ -17,3 +17,10 @@ code {
   margin: 0 auto;
   width: 60rem;
 }
+
+.removeBtn {
+  background: red;
+  border-radius: 50%;
+  color: #fff;
+  border: none;
+}
