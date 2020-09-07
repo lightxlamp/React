@@ -1,6 +1,7 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-export default function ToDoItem({todo, index}) {
+function ToDoItem({todo, index}) {
     return (    
     <li>
         <strong>{index + 1} </strong>
@@ -8,3 +9,10 @@ export default function ToDoItem({todo, index}) {
     </li>
     )  
 }
+
+ToDoItem.propTypes = {
+    todo: PropTypes.object.isRequired,
+    index: PropTypes.number
+}
+
+export default ToDoItem
