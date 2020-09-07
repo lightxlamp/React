@@ -1,10 +1,20 @@
 import React from 'react'
+import ToDoItem from './ToDoItem'
 
-export default function ToDoList() {
+const styles = {
+    ul: {
+        listStyle: 'none',
+        margin: 0,
+        padding: 0
+    }
+}
+
+export default function ToDoList(props) {
     return (
-        <ul>
-            <li>Task #1</li>
-            <li>Task #2</li>
+        <ul style={styles.ul}>
+            { props.todos.map((todo, index) => {
+                return <ToDoItem todo={todo} key={todo.id} index={index} />
+            })}
         </ul>
     )  
 }
